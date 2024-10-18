@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #f39c12; /* Accent color */
+}
+
+header p {
+    font-size: 1.2em;
+    color: #cccccc; /* Light grey for less emphasis */
+}
+
+.about-me {
+    margin-bottom: 30px;
+    background-color: #1e1e1e; /* Slightly lighter dark background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-me h2 {
+    margin-bottom: 15px;
+    color: #f39c12; /* Accent color */
+}
+
+.about-me p {
+    text-align: left;
+    color: #cccccc; /* Light grey for less emphasis */
+}
+
+.portfolio {
+    margin-bottom: 50px;
+}
+
+.portfolio h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f39c12; /* Accent color */
+}
+
+.portfolio-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-front {
+    background-color: #2c3e50; /* Darker card front */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-front h2 {
+    margin-bottom: 10px;
+    color: #ffffff; /* White text for visibility */
+}
+
+.card-front p {
+    color: #bdc3c7; /* Light grey for card front text */
+}
+
+.card-back {
+    background-color: #34495e; /* Darker card back */
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-back h3 {
+    margin-bottom: 10px;
+    color: #ffffff; /* White text for visibility */
+}
+
+.card-back p {
+    color: #bdc3c7; /* Light grey for card back text */
+    text-align: center;
+}
+
+.skills {
+    margin-bottom: 50px;
+}
+
+.skills h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f39c12; /* Accent color */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    background-color: #2c3e50; /* Dark background for skill cards */
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.skill-card h3 {
+    color: #ffffff; /* White text for skill names */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.resume {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.resume h2 {
+    margin-bottom: 20px;
+    color: #f39c12; /* Accent color */
+}
+
+.resume a {
+    color: #3498db; /* Blue color for links */
+    text-decoration: none;
+}
+
+.resume a:hover {
+    text-decoration: underline;
+}
+
+.query {
+    text-align: center;
+}
+
+.query h2 {
+    margin-bottom: 20px;
+    color: #dcb712; /* Accent color */
+}
+
+#query-form {
+    display: inline-block;
+    text-align: left;
+    background-color: #1e1e1e; /* Dark background for form */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#query-form input,
+#query-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dee2e5; /* Dark background for inputs */
+    color: #ffffff; /* White text for inputs */
+}
+
+#query-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f39c12; /* Accent button color */
+    color: #ffffff; /* White text for button */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#query-form button:hover {
+    background-color: #e67e22; /* Slightly lighter on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .portfolio-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .skill-card {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
